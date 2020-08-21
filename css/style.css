@@ -1,0 +1,365 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(225, 236, 235);
+}
+
+nav {
+    display: flex;
+    background-color: rgb(0, 110, 255);
+    justify-content: space-around;
+    height: 55px;
+    align-items: center;
+    position: fixed;
+     width: 100%;
+    top: 0;
+    left: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 35%;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(219, 230, 250);
+}
+nav a:hover {
+    color: rgb(255, 255, 255);
+}
+
+/* Hamburger Menu Pada Mobile */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+    z-index: 999;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height:3px;
+    background-color: rgb(222, 229, 243);
+    border-radius: 5px;
+    transition: all 1s;
+}
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    background-color: #ddd;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+.menu-toggle input:checked ~ span:nth-child(3){
+    transform: scale(0);
+}
+.menu-toggle input:checked ~ span:nth-child(4){
+    background-color: #ddd;
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+
+.jumbotron {
+    width: 100%;
+    height: 650px;
+	background-attachment: fixed;
+}
+.jumbotron img {
+    width: 100%;
+    height: 650px;
+    background-size: cover;
+}
+
+main {
+    display: flex;
+    padding: 40px;
+    width: 100%;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+.content {
+    flex: 3;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.content img {
+    width: 400px;
+    height: 250px;
+    margin-bottom: 15px;
+    
+}
+.content h3 a {
+    text-decoration: none;
+    color: rgb(0, 149, 248);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.content h3 a:hover {
+    color: rgb(0, 66, 248);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.content article {
+    margin-bottom: 50px;
+}
+.content article p {
+    margin-top: 10px;
+}
+
+aside {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+aside img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: -6px -6px 20px rgba(255, 255, 255, 1),
+                6px 6px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+
+.card {
+    box-shadow: -6px -6px 20px rgba(255, 255, 255, 1),
+                6px 6px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+    height: 100%;
+ }
+.card:hover {
+    box-shadow: inset -6px -6px 10px rgba(255, 255, 255, 0.5),
+               inset 6px 6px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+    padding: 30px;
+    height: 100%;
+ }
+
+ aside a {
+     display: inline-block;
+     text-decoration: none;
+     padding: 15px;
+     color: rgb(41, 190, 236);
+     margin-top: 20px;
+     font-size: 17px;
+     border-radius: 15px;
+     box-shadow: -6px -6px 20px rgba(255, 255, 255, 1),
+                6px 6px 20px rgba(0, 0, 0, 0.2);
+ }
+ aside a:hover {
+     display: inline-block;
+     text-decoration: none;
+     padding: 15px;
+     font-size: 16px;
+     color: rgb(4, 181, 235);
+     margin-top: 20px;
+     border-radius: 15px;
+     box-shadow: inset -6px -6px 10px rgba(255, 255, 255, 0.5),
+               inset 6px 6px 20px rgba(0, 0, 0, 0.05);
+ }
+
+table, tr {
+     padding: 10px;
+     margin: 20px auto;
+     text-align: left;
+ }
+
+
+.about {
+    width: 100%;
+    background-color: #0f0f0f;
+    display: flex;
+    color: rgb(141, 138, 129);
+}
+
+.left {
+    flex: 2;
+    flex-direction: column;
+    padding: 30px;
+    text-align: center;
+}
+
+.left img {
+    width: 310px;
+    height: 140px;  
+}
+
+.center {
+    flex: 2;
+    padding: 30px;
+}
+
+
+.right {
+    flex: 2;
+    flex-direction: column;
+    padding: 30px;
+    
+}
+.right ul {
+    list-style: none;
+}
+
+.right a {
+    text-decoration: none;
+    color: rgba(226, 203, 0, 0.897);
+}
+.center a {
+    text-decoration: none;
+    color: rgba(226, 203, 0, 0.897);
+}
+.center a:hover {
+    text-decoration: none;
+    color: rgba(0, 90, 226, 0.801);
+}
+
+footer {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(2, 19, 26);
+}
+footer h5 {
+    text-align: center;
+    color: rgb(0, 102, 255);
+    padding-top: 35px;
+}
+
+/* Responsive Breakpoints */
+
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+    nav ul {
+        width: 50%;
+    }
+
+    .jumbotron {
+        width: 100%;
+        height: 450px;
+        background-position: fixed;
+    }
+    .jumbotron img {
+        width: 100%;
+        height: 450px;
+        background-size: cover;
+    }
+    main {
+        display: block;
+        width: 100%;
+        padding: 50px;
+    }
+
+    table, tr {
+        margin: 20px auto;
+    }
+    
+    .about {
+        display: block;
+    }
+
+    footer h5 {
+        text-align: center;
+        color: rgb(0, 102, 255);
+        font-size: 13px;
+        padding-top: 25px;
+    }
+
+    .right {
+        margin-left: 20px;
+        list-style: none;
+    }
+
+    .right a {
+        text-decoration: none;
+        color: rgba(226, 203, 0, 0.897);
+    }
+}
+
+
+/* Mobile */
+@media screen and (max-width: 576px) {
+    .menu-toggle {
+        display: flex;
+    }
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        background-color: rgb(0, 81, 255);
+        z-index: 1;
+        transform: translateY(-100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+    nav ul.slide {
+        opacity: 1;
+        transform: translateY(0);
+        
+    }
+
+    .jumbotron {
+        width: 100%;
+        height: 350px;
+    }
+    .jumbotron img {
+        width: 100%;
+        height: 350px;
+        background-size: cover;
+    }
+    main {
+        display: block;
+        padding: 40px;
+    }
+    
+    .about {
+        display: block;
+    }
+
+    footer h5 {
+        text-align: center;
+        color: rgb(0, 102, 255);
+        font-size: 11px;
+        padding-top: 25px;
+    }
+
+    .right {
+        margin-left: 20px;
+        list-style: none;
+    }
+
+    .right a {
+        text-decoration: none;
+        color: rgba(226, 203, 0, 0.897);
+    }
+}
