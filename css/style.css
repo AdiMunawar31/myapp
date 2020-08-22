@@ -107,7 +107,6 @@ main {
 .content {
     flex: 3;
     flex-direction: column;
-    flex-wrap: wrap;
 }
 .content img {
     width: 400px;
@@ -339,7 +338,7 @@ footer h5 {
     }
     main {
         display: block;
-        padding: 20px;
+	width: 100%;
     }
     
     .about {
