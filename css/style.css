@@ -98,7 +98,7 @@ nav a:hover {
 
 main {
     display: flex;
-    padding: 40px;
+    padding: 20px;
     width: 100%;
     margin: 20px auto;
     box-sizing: border-box;
@@ -340,6 +340,11 @@ footer h5 {
         display: block;
 	width: 100%;
     }
+	.content img {
+    width: 200px;
+    height: 150px;
+    
+}
     
     .about {
         display: block;
